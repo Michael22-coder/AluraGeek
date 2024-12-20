@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AluraGeek - Estilo de Alta Moda</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Enlace a CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Swiper.js CSS -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+      </head>
+      <body>
+        <!-- Swiper.js Script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+  <!-- Encabezado -->
+  <header>
+    <h1>❤️❤️❤️ <span>AluraGeek</span></h1>
+  </header>
+
+  <!-- Contenedor Principal -->
+  <div class="container">
+    <!-- Formulario -->
+    <form id="product-form">
+      <h2>Agregar Producto</h2>
+      <input type="text" id="nombre" placeholder="Nombre del producto..." required>
+      <input type="number" id="precio" placeholder="Precio..." required>
+      <input type="url" id="imagen" placeholder="URL de la imagen..." required>
+      <button type="submit" class="btn-send">Enviar</button>
+      <button type="reset" class="btn-clean">Limpiar</button>
+    </form>
+
+    <!-- Lista de Productos -->
+    <div class="productos" id="productos">
+      <!-- Aquí se mostrarán los productos -->
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    Desarrollado por la Marca de Ropa <strong>Johanix</strong> Sigueme en Instagram: Johanix.ok y en LinkeIn: johanlopez-ok </strong> | Alura LATAM - 2024
+  </footer>
+
+  <!-- Script de JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- Slider de Imágenes -->
+<section class="slider-container">
+    <h2>Descubre la Elegancia que te Ofrece JOHANIX.OK</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="https://thumbs.dreamstime.com/b/golden-ropa-para-mujer-y-accesorios-zapatos-de-la-manera-je-de-lujo-70552943.jpg" alt="Imagen 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://media.gq.com.mx/photos/5e2d0938ac24e5000853eb93/16:9/w_2560%2Cc_limit/GettyImages-472479002.jpg" alt="Imagen 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://c.pxhere.com/photos/35/69/necklace_jewelry_gold_luxury_fashion_beauty_glamour_expensive-952464.jpg!d" alt="Imagen 3" />
+        </div>
+      </div>
+      <!-- Navegación del Slider -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true, /* Bucle infinito */
+      autoplay: {
+        delay: 3000, /* Intervalo entre transiciones */
+        disableOnInteraction: false,
+      },
+      effect: 'fade', /* Efecto de desvanecimiento */
+      fadeEffect: {
+        crossFade: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      speed: 1000, /* Velocidad de transición */
+    });
+  </script>
+
+<!-- Productos -->
+<section class="products">
+    <h2>Mis Productos</h2>
+    <div class="product-list">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <img src="images/cattleya.jpg" alt="cattleya" class="product-image" />
+        <h3>cattleya</h3>
+        <p>$1500.00</p>
+      </div>
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <img src="images/invertstyle.jpg" alt="invertstyle" class="product-image" />
+        <h3>invertstyle</h3>
+        <p>$2000.00</p>
+      </div>
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <img src="images/noctilux.jpg" alt="noctilux" class="product-image" />
+        <h3>noctilux</h3>
+        <p>$3000.00</p>
+      </div>
+    </div>
+  </section>
+  
